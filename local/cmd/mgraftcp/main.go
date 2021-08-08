@@ -94,6 +94,12 @@ func setCfg(key, val string) {
 		httpProxyAddr = val
 	case "select_proxy_mode":
 		selectProxyMode = val
+	case "blackip-file":
+		blackIPFile = val
+	case "whiteip-file":
+		whiteIPFile = val
+	case "not-ignore-local":
+		notIgnoreLocal, _ = strconv.ParseBool(val)
 	}
 }
 
